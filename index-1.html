@@ -38,7 +38,7 @@
         </section>
         </header>
         </div>
-        </div>
+        
         
 <!-- 2nd section -->
         <section class="section2">
@@ -158,15 +158,544 @@
                         </section>
 
                         <section class="article2">
-                            <div>
-
+                            <div class="art2-btns">
+                                <button class="article2-buttons ecs-2" >
+                                    <img class="ect-img" src="svg/svgexport-35.svg">
+                                    <h3 class="ect-txt ect-txt1">e-commerce site</h3>
+                                </button>
+                                <button class="article2-buttons ecs1">
+                                    <img class="ect-img" src="svg/svgexport-36.svg">
+                                    <h3 class="ect-txt">AI chatbot</h3>
+                                </button>
+                                <button class="article2-buttons ecs3">
+                                    <img class="ect-img" src="svg/svgexport-37.svg">
+                                    <h3 class="ect-txt">landing page</h3>
+                                </button>
+                                <button class="article2-buttons ecs4">
+                                    <img class="ect-img" src="svg/svgexport-38.svg">
+                                    <h3 class="ect-txt">edge function</h3>
+                                </button>
                             </div>
+                            <div class="scrl-txt">
+                            <pre>
+                                <code>
+                                <span class="line">
+                                    <span style="color:#F286C4">export</span>
+                                    <span style="color:#F286C4"> function</span>
+                                    <span style="color:#62E884"> CartMain</span>
+                                    <span style="color:#F6F6F4">({</span>
+                                    <span style="color:#FFB86C;font-style:italic">layout</span>
+                                    <span style="color:#F6F6F4">, </span>
+                                    <span style="color:#FFB86C;font-style:italic">cart</span>
+                                    <span style="color:#F6F6F4">&</span>
+                                    <span style="color:#F286C4">:</span>
+                                    <span style="color:#97E1F1;font-style:italic"> CartMainProps</span>
+                                    <span style="color:#F6F6F4">) {</span>
+                                </span>
+                                <span class="line">
+                                    <span style="color:#F286C4">  const</span>
+                                    <span style="color:#F6F6F4"> linesCount </span>
+                                    <span style="color:#F286C4">=</span>
+                                    <span style="color:#62E884"> Boolean</span>
+                                    <span style="color:#F6F6F4">(cart?.lines?.nodes?.length </span>
+                                    <span style="color:#F286C4">||</span>
+                                    <span style="color:#BF9EEE"> 0</span>
+                                    <span style="color:#F6F6F4">);</span>
+                                </span>
+                                <span class="line">
+                                    <span style="color:#F286C4">  const</span>
+                                    <span style="color:#F6F6F4"> withDiscount </span>
+                                    <span style="color:#F286C4">=</span>
+                                </span>
+                                <span class="line">
+                                    <span style="color:#F6F6F4">    cart </span>
+                                    <span style="color:#F286C4">&amp;&amp;</span>
+                                </span>
+                                <span class="line">
+                                    <span style="color:#62E884">    Boolean</span>
+                                    <span style="color:#F6F6F4">(cart.discountCodes.</span>
+                                    <span style="color:#62E884">filter</span>
+                                    <span style="color:#F6F6F4">((</span>
+                                    <span style="color:#FFB86C;font-style:italic">code</span>
+                                    <span style="color:#F6F6F4">) </span>
+                                    <span style="color:#F286C4">=&gt;</span>
+                                    <span style="color:#F6F6F4"> code.applicable).length);</span>
+                                </span>
+                                <span class="line">
+                                    <span style="color:#F286C4">  const</span>
+                                    <span style="color:#F6F6F4"> className </span>
+                                    <span style="color:#F286C4">=</span>
+                                    <span style="color:#E7EE98"> `cart-main </span>
+                                    <span style="color:#F286C4">${</span>
+                                    <span style="color:#F6F6F4">withDiscount</span>
+                                    <span style="color:#F286C4"> ?</span>
+                                    <span style="color:#DEE492"> '</span>
+                                    <span style="color:#E7EE98">with-discount</span>
+                                    <span style="color:#DEE492">'</span>
+                                    <span style="color:#F286C4"> :</span>
+                                    <span style="color:#DEE492"> ''</span>
+                                    <span style="color:#F286C4">}</span>
+                                    <span style="color:#E7EE98">`</span>
+                                    <span style="color:#F6F6F4">;</span>
+                                </span>
+                                <span></span>
+                                <span class="line">
+                                    <span style="color:#F286C4">  return</span>
+                                    <span style="color:#F6F6F4"> (</span>
+                                </span>
+                                <span class="line">
+                                    <span style="color:#F6F6F4">    &lt;</span>
+                                    <span style="color:#F286C4">div</span>
+                                    <span style="color:#62E884;font-style:italic"> className</span>
+                                    <span style="color:#F286C4">={</span>
+                                    <span style="color:#F6F6F4">className</span>
+                                    <span style="color:#F286C4">}</span>
+                                    <span style="color:#F6F6F4">&gt;</span>
+                                </span>
+                                <span class="line">
+                                    <span style="color:#F6F6F4">      &lt;</span>
+                                    <span style="color:#97E1F1;font-style:italic">CartEmpty</span>
+                                    <span style="color:#62E884;font-style:italic"> hidden</span>
+                                    <span style="color:#F286C4">={</span>
+                                    <span style="color:#F6F6F4">linesCount</span>
+                                    <span style="color:#F286C4">}</span>
+                                    <span style="color:#62E884;font-style:italic"> layout</span>
+                                    <span style="color:#F286C4">={</span>
+                                    <span style="color:#F6F6F4">layout</span>
+                                    <span style="color:#F286C4">}</span>
+                                    <span style="color:#F6F6F4"> /&gt;</span>
+                                </span>
+                                <span class="line">
+                                    <span style="color:#F6F6F4">      &lt;</span>
+                                    <span style="color:#97E1F1;font-style:italic">CartDetails</span>
+                                    <span style="color:#62E884;font-style:italic"> cart</span>
+                                    <span style="color:#F286C4">={</span>
+                                    <span style="color:#F6F6F4">cart</span>
+                                    <span style="color:#F286C4">}</span>
+                                    <span style="color:#62E884;font-style:italic"> layout</span>
+                                    <span style="color:#F286C4">={</span>
+                                    <span style="color:#F6F6F4">layout</span>
+                                    <span style="color:#F286C4">}</span>
+                                    <span style="color:#F6F6F4"> /&gt;</span>
+                                </span>
+                                <span class="line">
+                                    <span style="color:#F6F6F4">    &lt;/</span>
+                                    <span style="color:#F286C4">div</span>
+                                    <span style="color:#F6F6F4">&gt;</span>
+                                </span>
+                                <span class="line">
+                                    <span style="color:#F6F6F4">  );</span>
+                                </span>
+                                <span class="line">
+                                    <span style="color:#F6F6F4">}</span>
+                                </span>
+                                </code>
+                            </pre>
+                            </div>
+                            <footer class="dply-btn">
+                                <button class="b4 b4-btn">Deploy to Netlify</button>
+                            </footer>
                         </section>
+                    </article>
+
+                    <article class="article art-stats">
+                        <div class="stats">
+                            <div class="stats-0">
+                                <h3 class="stats-head">35M+</h3>
+                                <p class="stats-p">Projects displayed on Netlify</p>
+                            </div>
+                            <div class="stats-0">
+                                <h3 class="stats-head">7M+</h3>
+                                <p class="stats-p">Developers</p>
+                            </div>
+                            <div class="stats-0">
+                                <h3 class="stats-head">99.99%</h3>
+                                <p class="stats-p">Uptime SLA</p>
+                            </div>
+                        </div>
                     </article>
                 </div>
             </div>
         </section>
 
+        <!-- SECTION 6 -->
+
+        <section class="section6">
+            <div class="gs-div">
+                <p class="get-start">GET STARTED</p>
+                <h3 class="get-start-p">Deploy any web project in minutes</h3>
+            </div>
+            
+            <div class="section4 grid-section">
+                <div class="explore">
+                    <div class="astro">
+                        <img class="astro-img" src="svg/Astro.webp" >
+                        <div class="astro-text">
+                            <h3 class="astro-txt">
+                                <span class="astro-txt1">DEPLOY WITH</span>
+                                <span>Astro</span>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="explore">
+                    <div class="astro">
+                        <img class="astro-img" src="svg/Tanstack.webp" >
+                        <div class="astro-text">
+                            <h3 class="astro-txt">
+                                <span class="astro-txt1">DEPLOY WITH</span>
+                                <span>TanStack</span>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="explore">
+                    <div class="astro">
+                        <img class="astro-img" src="svg/NextJS.webp" >
+                        <div class="astro-text">
+                            <h3 class="astro-txt">
+                                <span class="astro-txt1">DEPLOY WITH</span>
+                                <span>Next.JS</span>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="explore">
+                    <div class="astro">
+                        <img class="astro-img" src="svg/Remix.webp" >
+                        <div class="astro-text">
+                            <h3 class="astro-txt">
+                                <span class="astro-txt1">DEPLOY WITH</span>
+                                <span>Remix</span>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="set1">
+                <div class="logo-squares">
+                    <div class="vg-main" >
+                        <div class="vite-grid">
+                            <div class="vite-grid0">
+                                <div class="vite-grid1">
+                                    <img class="vite-img" src="svg/0.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="vite-grid0">
+                                <div class="vite-grid1">
+                                    <img class="vite-img" src="svg/react.svg" alt="">    
+                                </div>
+                            </div>
+                            <div class="vite-grid0">
+                                <div class="vite-grid1">
+                                    <img class="vite-img" src="svg/vite.avif" alt="">    
+                                </div>
+                            </div>
+                            <div class="vite-grid0">
+                                <div class="vite-grid1">
+                                    <img class="vite-img" src="svg/V.svg" alt="">    
+                                </div>
+                            </div>
+                            <div class="vite-grid0">
+                                <div class="vite-grid1">
+                                    <img class="vite-img" src="svg/G.svg" alt="">    
+                                </div>
+                            </div>
+                            <div class="vite-grid0">
+                                <div class="vite-grid1">
+                                    <img class="vite-img" src="svg/A.svg" alt="">    
+                                </div>
+                            </div>
+                            <div class="vite-grid0">
+                                <div class="vite-grid1">
+                                    <img class="vite-img" src="svg/hh.svg" alt="">    
+                                </div>
+                            </div>
+                            <div class="vite-grid0">
+                                <div class="vite-grid1">
+                                    <img class="vite-img" src="svg/H.svg" alt="">    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gtn">
+                            <span>Head over to our docs for a full list of framework configurations.</span><br>
+                            <a class="gtn-lnk" href="">
+                                <span class="gtn-lnk-txt">Go to Netlify docs</span>
+                                <img class="gtn-lnk-img" src="svg/svgexport-40.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="set2">
+                <div class="logo-squares">
+                    <div class="vg-main" >
+                        <div class="vite-grid">
+                            <div class="vite-grid0">
+                                <div class="vite-grid1">
+                                    <img class="vite-img" src="svg/0.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="vite-grid0">
+                                <div class="vite-grid1">
+                                    <img class="vite-img" src="svg/react.svg" alt="">    
+                                </div>
+                            </div>
+                            <div class="vite-grid0">
+                                <div class="vite-grid1">
+                                    <img class="vite-img" src="svg/vite.avif" alt="">    
+                                </div>
+                            </div>
+                            <div class="vite-grid0">
+                                <div class="vite-grid1">
+                                    <img class="vite-img" src="svg/V.svg" alt="">    
+                                </div>
+                            </div>
+                            <div class="vite-grid0">
+                                <div class="vite-grid1">
+                                    <img class="vite-img" src="svg/G.svg" alt="">    
+                                </div>
+                            </div>
+                            <div class="vite-grid0">
+                                <div class="vite-grid1">
+                                    <img class="vite-img" src="svg/A.svg" alt="">    
+                                </div>
+                            </div>
+                            <div class="vite-grid0">
+                                <div class="vite-grid1">
+                                    <img class="vite-img" src="svg/hh.svg" alt="">    
+                                </div>
+                            </div>
+                            <div class="vite-grid0">
+                                <div class="vite-grid1">
+                                    <img class="vite-img" src="svg/H.svg" alt="">    
+                                </div>
+                            </div>
+                            <div class="gtn">
+                                <span>Head over to our docs for a full list of framework configurations.</span><br>
+                                <a class="gtn-lnk" href="">
+                                    <span class="gtn-lnk-txt">Go to Netlify docs</span>
+                                    <img class="gtn-lnk-img" src="svg/svgexport-40.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECTION 7 -->
+
+        <section class="section7">
+            <article class="mammut-art">
+                <section class="mammut-sec">
+                    <div class="mammut-grid">
+                        <img class="net-logo" src="/svg/logo-netlify-small-monochrome-lightmode.svg" alt="">
+                        <span class="seperator"></span>
+                        <img class="net-logo" style="max-inline-size: 100%;" src="svg/MAMMUT.svg" alt="">
+                    </div>
+                    <div class="mmt-list">
+                        <div class="mmt1">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="white" d="M0 8C0.0208333 6.5 0.385417 5.15625 1.09375 3.96875C1.80208 2.76042 2.76042 1.80208 3.96875 1.09375C5.15625 0.385417 6.5 0.0208333 8 0C9.5 0.0208333 10.8438 0.385417 12.0312 1.09375C13.2396 1.80208 14.1979 2.76042 14.9062 3.96875C15.6146 5.15625 15.9792 6.5 16 8C15.9792 9.5 15.6146 10.8438 14.9062 12.0312C14.1979 13.2396 13.2396 14.1979 12.0312 14.9062C10.8438 15.6146 9.5 15.9792 8 16C6.5 15.9792 5.15625 15.6146 3.96875 14.9062C2.76042 14.1979 1.80208 13.2396 1.09375 12.0312C0.385417 10.8438 0.0208333 9.5 0 8ZM11.625 6.625C11.7917 6.4375 11.875 6.22917 11.875 6C11.875 5.77083 11.7917 5.5625 11.625 5.375C11.4375 5.20833 11.2292 5.125 11 5.125C10.7708 5.125 10.5625 5.20833 10.375 5.375L7 8.75L5.625 7.375C5.4375 7.20833 5.22917 7.125 5 7.125C4.77083 7.125 4.5625 7.20833 4.375 7.375C4.20833 7.5625 4.125 7.77083 4.125 8C4.125 8.22917 4.20833 8.4375 4.375 8.625L6.375 10.625C6.5625 10.7917 6.77083 10.875 7 10.875C7.22917 10.875 7.4375 10.7917 7.625 10.625L11.625 6.625Z" />
+                                </svg>
+                            <p style="margin-top: -5px;">Increase in developer productivity</p>
+                        </div>
+                        <div class="mmt1">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="white" d="M0 8C0.0208333 6.5 0.385417 5.15625 1.09375 3.96875C1.80208 2.76042 2.76042 1.80208 3.96875 1.09375C5.15625 0.385417 6.5 0.0208333 8 0C9.5 0.0208333 10.8438 0.385417 12.0312 1.09375C13.2396 1.80208 14.1979 2.76042 14.9062 3.96875C15.6146 5.15625 15.9792 6.5 16 8C15.9792 9.5 15.6146 10.8438 14.9062 12.0312C14.1979 13.2396 13.2396 14.1979 12.0312 14.9062C10.8438 15.6146 9.5 15.9792 8 16C6.5 15.9792 5.15625 15.6146 3.96875 14.9062C2.76042 14.1979 1.80208 13.2396 1.09375 12.0312C0.385417 10.8438 0.0208333 9.5 0 8ZM11.625 6.625C11.7917 6.4375 11.875 6.22917 11.875 6C11.875 5.77083 11.7917 5.5625 11.625 5.375C11.4375 5.20833 11.2292 5.125 11 5.125C10.7708 5.125 10.5625 5.20833 10.375 5.375L7 8.75L5.625 7.375C5.4375 7.20833 5.22917 7.125 5 7.125C4.77083 7.125 4.5625 7.20833 4.375 7.375C4.20833 7.5625 4.125 7.77083 4.125 8C4.125 8.22917 4.20833 8.4375 4.375 8.625L6.375 10.625C6.5625 10.7917 6.77083 10.875 7 10.875C7.22917 10.875 7.4375 10.7917 7.625 10.625L11.625 6.625Z" />
+                                </svg>
+                            <p style="margin-top: -5px;">Increase in site reliability</p>
+                        </div>
+                        <div class="mmt1">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="white" d="M0 8C0.0208333 6.5 0.385417 5.15625 1.09375 3.96875C1.80208 2.76042 2.76042 1.80208 3.96875 1.09375C5.15625 0.385417 6.5 0.0208333 8 0C9.5 0.0208333 10.8438 0.385417 12.0312 1.09375C13.2396 1.80208 14.1979 2.76042 14.9062 3.96875C15.6146 5.15625 15.9792 6.5 16 8C15.9792 9.5 15.6146 10.8438 14.9062 12.0312C14.1979 13.2396 13.2396 14.1979 12.0312 14.9062C10.8438 15.6146 9.5 15.9792 8 16C6.5 15.9792 5.15625 15.6146 3.96875 14.9062C2.76042 14.1979 1.80208 13.2396 1.09375 12.0312C0.385417 10.8438 0.0208333 9.5 0 8ZM11.625 6.625C11.7917 6.4375 11.875 6.22917 11.875 6C11.875 5.77083 11.7917 5.5625 11.625 5.375C11.4375 5.20833 11.2292 5.125 11 5.125C10.7708 5.125 10.5625 5.20833 10.375 5.375L7 8.75L5.625 7.375C5.4375 7.20833 5.22917 7.125 5 7.125C4.77083 7.125 4.5625 7.20833 4.375 7.375C4.20833 7.5625 4.125 7.77083 4.125 8C4.125 8.22917 4.20833 8.4375 4.375 8.625L6.375 10.625C6.5625 10.7917 6.77083 10.875 7 10.875C7.22917 10.875 7.4375 10.7917 7.625 10.625L11.625 6.625Z" />
+                                </svg>
+                            <p style="margin-top: -5px;">Quality on par with extremely high standards</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="mammut-sec1">
+                    <div class="custory">Customer story</div>
+                    <h2 class="mmt-head">Mammut means quality - in brand and in technology</h2>
+                    <div class="mmt-p">
+                        <p>
+                            Mammut came to Netlify because they needed a performant,
+                             interoperable Composable Web Platform that could deliver a 
+                             best-in-class digital brand experience for their customers. 
+                             They needed a partner that could keep their site reliable and 
+                             performant during peak retail season and unexpected traffic spikes.
+                        </p>
+                    </div>
+                    <a class="gtn-lnk" href="">
+                        <span class="gtn-lnk-txt">View the story</span>
+                        <img class="gtn-lnk-img" src="svg/svgexport-40.svg" alt="">
+                    </a>
+                </section>
+            </article>
+        </section>
+
+        <!-- SECTION 8 -->
+
+        <section class="section8">
+            <div>
+                <h2 class="rttn">Ready to try Netlify?</h2>
+            </div>
+            <div class="dep-btn">
+                <a class="explorebut">Deploy now</a>
+            </div>
+        </section>
     </div>
+        <!-- FOOTER -->
+
+        <footer>
+
+            <div class="social-media">
+                <a class="" href="">
+                    <img class="n-logo" src="svg/svgexport-41.svg" alt="">
+                </a>
+                <div class="social-media-icons">
+                    <img style="size: 20px;" src="svg/svgexport-42.svg" alt="">
+                    <img src="svg/svgexport-43.svg" alt="">
+                    <img src="svg/svgexport-44.svg" alt="">
+                    <img src="svg/svgexport-45.svg" alt="">
+                    <img src="svg/svgexport-46.svg" alt="">
+                    <img src="svg/svgexport-47.svg" alt="">
+                </div>
+            </div>
+
+            <nav class="navigations">
+                <div class="nav1">
+                    <div class="nav-menu">
+                        <h2 class="nav-menu-head">Why Netlify?</h2>
+                        <img class="nav-arw" src="svg/svgexport-48.svg" alt="">
+                    </div>
+                    <div class="nav-menu">
+                        <h2 class="nav-menu-head">Products</h2>
+                        <img class="nav-arw" src="svg/svgexport-48.svg" alt="">
+                    </div>
+                    <div class="nav-menu">
+                        <h2 class="nav-menu-head">Explore</h2>
+                        <img class="nav-arw" src="svg/svgexport-48.svg" alt="">
+                    </div>
+                    <div class="nav-menu">
+                        <h2 class="nav-menu-head">Company</h2>
+                        <img class="nav-arw" src="svg/svgexport-48.svg" alt="">
+                    </div>
+                    <div class="nav-menu">
+                        <h2 class="nav-menu-head">Contact Us</h2>
+                        <img class="nav-arw" src="svg/svgexport-48.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="nav2">
+                    <section class="hid-list">
+                        <h2 class="nav-menu-head">Why Netlify?</h2>
+                        <div class="list-down">
+                            <span>Customers</span>
+                            <span>Agent Experience</span>
+                            <span>Security</span>
+                            <span>Agency Partner Program</span>
+                            <span>Technology Partner Program</span>
+                        </div>
+                    </section>
+                    <section class="hid-list">
+                        <h2 class="nav-menu-head">Products</h2>
+                        <div class="list-down">
+                            <span>Composable Web Platform</span>
+                            <span>Connect</span>
+                            <span>Netlify Core</span>
+                            <span>Create</span>
+                            <span>Netlify SDK</span>
+                            <span>Pricing</span>
+                            <span>Changelog</span>
+                            <span>Add-ons +</span>
+                        </div>
+                    </section>
+                    <section class="hid-list">
+                        <h2 class="nav-menu-head">Explore</h2>
+                        <div class="list-down">
+                            <span>Docs</span>
+                            <span>Integrations</span>
+                            <span>Jamstack Book</span>
+                            <span>Community</span>
+                            <span>Resources & Guides</span>
+                            <span>Remotely Interesting</span>
+                            <span>Technologies+</span>
+                        </div>
+                    </section>
+                    <section class="hid-list">
+                        <h2 class="nav-menu-head">Company</h2>
+                        <div class="list-down">
+                            <span>Blog</span>
+                            <span>About</span>
+                            <span>Careers</span>
+                            <span>Compose Conference</span>
+                            <span>Code of Conduct</span>
+                            <span>Press</span>
+                        </div>
+                    </section>
+                    <section class="hid-list">
+                        <h2 class="nav-menu-head">Contact Us</h2>
+                        <div class="list-down">
+                            <span>Sales</span>
+                            <span>Support</span>
+                            <span>Status</span>
+                            <span>Forums</span>
+                            <span>Hire an Agency</span>
+                        </div>
+                    </section>
+                </div>
+                
+                
+            </nav>
+
+            
+
+            <section class="news">
+                <h2 class="news-head">Stay up to date with Netlify news</h2>
+                <div class="subscribe">
+                    <input type="text" class="news-search">
+                    <a href="" class="explorebut sub-btn">Subscribe</a>
+                </div>
+            </section>
+
+            <section class="legal">
+                <div class="cookie-div">
+                    <span class="cookie">Trust Center</span>
+                    <span class="cookie">Privacy</span>
+                    <span class="cookie">GDPR/CCPA</span>
+                    <span class="cookie">Abuse</span>
+                    <span class="cookie">Cookie Settings</span>
+                </div>
+                <p class="copyright">© 2025 Netlify</p>
+            </section>
+
+            <div class="themes">
+                <select class="system" name="" id="theme">
+                    <option value="">System</option>
+                    <option value="">Dark</option>
+                    <option value="">Light</option>
+                </select>
+            </div>
+
+        </footer>
+        
+        <div class="messenger-btn">
+            <button class="messenger">
+                <svg width="20" height="20" viewBox="0 0 18 18" fill="white" style="vertical-align: middle;">
+                    <path d="M16.875 4.5H15.75v6.75a1.125 1.125 0 01-1.125 1.125H7.682l-2.057 2.25h5.625L14.625 18v-3.375h2.25A1.125 1.125 0 0018 13.5V5.625A1.125 1.125 0 0016.875 4.5z"></path>
+                    <path d="M1.125 0h11.25A1.125 1.125 0 0113.5 1.125V9a1.125 1.125 0 01-1.125 1.125H6.75L3.375 13.5v-3.375h-2.25A1.125 1.125 0 010 9V1.125A1.125 1.125 0 011.125 0z"></path>
+                </svg>
+            </button>
+        </div>
+        
+        
+        
     </body>
-</html>   
+</html>
